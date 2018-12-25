@@ -14,7 +14,7 @@ int main()
 {
 	string st;
 	char t[4];
-	cout << "nhap du lieu: ";
+	cout << "nhap du lieu : ";
 	getline(cin, st);
 	NgayThang x;
 	t[0]=st[0];
