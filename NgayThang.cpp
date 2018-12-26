@@ -47,6 +47,8 @@ int main()
 	t[2]=st[8];
 	t[3]=st[9];
 	x.nam=atoi(t);
+	
+	
 	if(KiemTra(x.nam))
 		cout << " nam "  <<x.nam   << "  la nam nhuan"   <<endl;
 	else
@@ -55,4 +57,19 @@ int main()
 		
 	cout << x.ngay <<"/"<< x.thang <<"/" << x.nam <<endl;	
 }
+/*NgayThang congNgayThang(NgayThang n, int x) // x<=365
+{
+	int kq = x+sttNgayTrongNam(n);
+	int nam=n.nam;
+		if(kq<=365)
+			return ngayTuSTT(kq,nam);
+		else
+			if(kynhuan(nam)==1)
+				if(kq==366)
+					return ngaytustt(kq,nam)
+				else
+					return ngaytustt(kq-366, nam+1);
+			else
+				return ngaytustt(kq-365, nam+1);
+}*/
 
