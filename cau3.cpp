@@ -42,7 +42,7 @@ struct Cauhoi_DA
 	string DA;
 };
 // tao nguoi choi
-struct ng
+struct NguoiChoi
 {
 	string ten;
 	int diem;
@@ -70,21 +70,33 @@ struct ng
 //		
 //	}
 //}
+vector <NguoiChoi> DanhSach;
 vector <Cauhoi_DA> dscau;
-void Xuat(Cauhoi_DA de)
+// Tao nguoi choi
+void NhapNguoiChoi()
 {
-	
-	string DA;
-	cout<<de.cauhoi<<endl;
-	cout<< de.cauhoi;
-	cout<< de.A;
-	cout<< de.B;
-	cout<< de.C;
-	cout<< de.D;
-	cout<<"nhap dap an";
-	cin>>DA;
-
+	NguoiChoi n1;
+	fflush(stdin);
+	cout<<"nhap ten nguoi choi ";
+	getline(cin, n1.ten);
+	n1.diem=0;
+	DanhSach.push_back(n1);
 }
+// xuat cau hoi ra man hinh
+//void Xuat(Cauhoi_DA de)
+//{
+//	
+//	string DA;
+//	cout<<de.cauhoi<<endl;
+//	cout<< de.cauhoi;
+//	cout<< de.A;
+//	cout<< de.B;
+//	cout<< de.C;
+//	cout<< de.D;
+//	cout<<"nhap dap an";
+//	cin>>DA;
+//
+//}
 void LayDe()
 {
 	ifstream f("DE1.txt");
@@ -128,7 +140,9 @@ void DocDe()
 
 int main()
 {
-	LayDe();	
+	NhapNguoiChoi();	
+	LayDe();
+
 //	DocDe();
 }
 
