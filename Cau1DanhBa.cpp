@@ -31,7 +31,7 @@ void ThemMoi(contact c)
 void Ghidb()
 {
 	for(int i=0; i<db.size(); i++)
-	frite(&db[i], sizeof(rb), 1,f);
+	fwrite(&db[i], sizeof(rb), 1,f);
 	/*	contact a;
 	cout<<"nhap ho ten\n";
 	cin>>a.ten;
