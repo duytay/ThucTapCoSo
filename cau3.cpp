@@ -24,6 +24,7 @@
 //	+return 2
 //	+return 0;
 //	+luuDiem(int diem)
+// Danh Sach nguoi choi vector<nguoichoi> dsngchoi;
 #include <iostream>
 #include <string.h>
 #include <vector>
@@ -72,6 +73,7 @@ struct ng
 vector <Cauhoi_DA> dscau;
 void Xuat(Cauhoi_DA de)
 {
+	
 	string DA;
 	cout<<de.cauhoi<<endl;
 	cout<< de.cauhoi;

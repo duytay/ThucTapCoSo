@@ -17,11 +17,11 @@ typedef struct
 
 vector <contact> db;
 fstream f("DanhBa.dat");
-void ThemMoi(contact c);
-void Ghidb(contact c);
-void LietKedb(contact c);
-void CapNhat(contact c);
-void Xoacontact(char *sdt);
+//void ThemMoi(contact c);
+//void Ghidb(contact c);
+//void LietKedb(contact c);
+//void CapNhat(contact c);
+//void Xoacontact(char *sdt);
 
 void ThemMoi(contact c)
 {
