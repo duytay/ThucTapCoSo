@@ -6,12 +6,21 @@
 #include <string.h>
 #include <fstream>
 #include <vector>
+// Tao struct Cap{ Dinh, tang)
+// Tao ra  vector <cap> Danh sach de xet trong qua trinh xu li
+// Tao  bien char kieu Cap
+// Gan cung dinh dau tien vao char
+// Xet cac dinh chua duoc chon
+// Kiem tra xem co duong di tu dinh duoc chon toi cac dinh con lai
+// Neu co duong di -> gan dinh dang xet i, chon tang = chon, tang+a[i][chondinh]
+//nguoc lai chon tang = 0;
+// Kiem tra lan luot cac phim tu trang vector chon ra phan tu co tong nho nhat va i=0 dua vao ds chon.
 using namespace std;
 int a[10][10];
 	int n;
-	fstream fi;
+	fstream fi; //Nhap file
 //ifstream fi("DoThi.txt")
-
+//Tao luu file .txt
 void TaoMoi(/*int a[][], int &n*/)
 {
 	cout<<"nhap n";
