@@ -40,7 +40,7 @@ void TaoMoi(/*int a[][], int &n*/)
 	fi<<endl;
 	fi.close();
 }
-
+// Doc file txt
 void DocFile()
 {
 		for(int i=0; i<n; i++)
@@ -53,6 +53,7 @@ void DocFile()
 		}
 			fi.close();
 }
+// in do thi ra man hinh
 void XuatDoThi()
 {
 	for(int i=0; i<n;i++)

@@ -4,63 +4,82 @@
 #include <vector>
 #include <fstream>
 using namespace std;
-File*f=fopen("input.dat","rb")
 
-
+// Khai bao cau truc contact
 typedef struct
 {
 	char ten[20];
 	char sdt[11];
 	char email[20], diachi[50];
 	bool gioitinh;
-}contact;
+}Contact;
 
-vector <contact> db;
-fstream f("DanhBa.dat");
-//void ThemMoi(contact c);
-//void Ghidb(contact c);
-//void LietKedb(contact c);
-//void CapNhat(contact c);
-//void Xoacontact(char *sdt);
 
-void ThemMoi(contact c)
+vector <Contact> DanhBa;// them Danhba vao contact
+vector <Contact> db;// lay db ra de kiem tra
+void GhiFile()
 {
-	db.push_back();
+	FILE *f = fopen("input.dat","wb"); // mo file nhi phan input.dat
+	for(int i=0;i<DanhBa.size();i++)
+		fwrite(&DanhBa[i],sizeof(Contact),1,f); //tim kich co cua file Contact
+	fclose(f);
+}
+// Xuat thong tin cua tung contact
+void Xuat(Contact c)
+{
+	cout<<"ten"<<c.ten<<endl;
+	cout<<"so dien thoai"<<c.sdt<<endl;
+	cout<<"gioi tinh"<<c.gioitinh<<endl;
+	cout<<"email"<<c.email<<endl;
 }
 
-void Ghidb()
+
+//Them danh ba vao contact
+void Them()
 {
-	for(int i=0; i<db.size(); i++)
-	fwrite(&db[i], sizeof(rb), 1,f);
-	/*	contact a;
-	cout<<"nhap ho ten\n";
-	cin>>a.ten;
-	cout<<"so dien thoai\n";
-	cin>>a.sdt;
-	cout<<"nhap email\n";
-	cin>>a.email;
-	cout<<"nhap gioi tinh\n";
-	cin>>a.gioitinh;
-	cout<<"nhap dia chi\n";
-	cin>>a.diachi;
-	//DanhBa.push_back();*/
+	Contact c;
+	
+	strcpy(c.ten, "Nguyen Duy Tay"); //Dung strcpy de gan chuoi vao cac tham so cua struct Contact
+	strcpy(c.sdt, "123");
+	c.gioitinh = 1;
+	strcpy(c.email, "duytay");
+	strcpy(c.diachi, "NT");
+	DanhBa.push_back(c); //push_back dung de them cac tham so trong struct duoc gan boi bien Contact c vao cuoi vector DanhBa
+//	InDanhBa(c);
 }
-void Xuat(contact c)
+// Doc danh ba tu file nhi phan 
+void DocFile()
 {
-	cout<<c;
+	FILE *f = fopen("input.dat","rb"); // mo file input.dat
+	for(int i=0;i<DanhBa.size();i++) //kich co cua vector
+		{
+			Contact c;
+			fread(&c,sizeof(c),1,f);
+			db.push_back(c);
+		}
+	fclose(f);
 }
+// liet ke cac contact in ra danh ba
 void Lietke()
 {
 	DocFile();
-	for(int i=0; i<sizeof(db), i++)
-		xuat(db[i]);
+	for(int i=0; i<sizeof(db); i++)
+	{
+		Xuat(db[i]);
+	}
+}
+// chinh sua danh ba
+void ChinhSua(char tt[])
+{
+	for(int i=0;i<DanhBa.size();i++)
+		if(strcmp(db[i].sdt,tt)==0)
+			strcpy(db[i].ten,"NGuyen Duy");
 }
 int main()
 {
-	char st[]='';
-	strycpy(ten,st);
-	c.gioitinh=0;
-	cout<<"Them moi";
+	Them();
+	GhiFile();
+	DocFile();
 }
 
 
