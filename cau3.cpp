@@ -9,7 +9,7 @@
 	}
 	strcut Ng
 	{
-		string, ten;
+		string, ten;s
 		int diem;
 	}
 */
@@ -48,28 +48,6 @@ struct NguoiChoi
 	int diem;
 };
 
-//void DocDe()
-//{
-//	int de;
-//	cout<<"chon" << endl;
-//	cin>> de;
-//	if(de==1)
-//	{
-//		ifstream f("Input.txt");
-//		string s, De de1;
-//		int n;
-//		getline(f,s);
-//		n=atoi(s);
-//		for(int i=0; i<n; i++)
-//		{
-//			getline(f,s);
-//			dscaugoi[i].CH.s;
-//		}
-//	
-//		
-//		
-//	}
-//}
 vector <NguoiChoi> DanhSach;
 vector <Cauhoi_DA> dscau;
 // Tao nguoi choi
@@ -82,21 +60,7 @@ void NhapNguoiChoi()
 	n1.diem=0;
 	DanhSach.push_back(n1);
 }
-// xuat cau hoi ra man hinh
-//void Xuat(Cauhoi_DA de)
-//{
-//	
-//	string DA;
-//	cout<<de.cauhoi<<endl;
-//	cout<< de.cauhoi;
-//	cout<< de.A;
-//	cout<< de.B;
-//	cout<< de.C;
-//	cout<< de.D;
-//	cout<<"nhap dap an";
-//	cin>>DA;
-//
-//}
+// lay de tu file txt và luu diem nguoi choi
 void LayDe()
 {
 	ifstream f("DE1.txt");
@@ -136,8 +100,6 @@ void DocDe()
 	for(int i=0; i<dscau.size(); i++)
 		LayDe();
 }
-// xuat cau tra loi ra man hinh
-
 int main()
 {
 	NhapNguoiChoi();	
